@@ -1,36 +1,50 @@
 <?php 
 
 // I used for heder template
+get_header();
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="<?= language_attributes();?>" class="no-js">
-<head>
-    <meta charset="<?= bloginfo("charset");?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head();?>
-</head>
-<body class="<?php body_class();?>">
-    
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-3">
-      <img src="<?= get_theme_mod('loego_area');?>">
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-9">
+
+
+         <?php 
+          // if(have_posts()) : 
+          //   while(have_posts( )) : the_post()
+          if(have_posts()) {
+            while(have_posts()){
+              the_post()
+        
+        ?> 
+          <div class="blog_info">
+              <?= the_content();?>
+          </div>
+          <?php 
+
+            }
+          }
+          else {
+            _e('no posts');
+          }
+
+            // endwhile;
+            // else :
+            //   _e('no posts');
+            // endif;
+          ?>
+     
     </div>
-    <div class="col-9">
-      <div class="manubar">
-        <?php wp_nav_menu(array(
-          'theme_location' => 'primary_manue',
-          'menu_id' => 'nav'
-          ))?>
-      </div>
+    <div class="col-md-3">
+          <h4>thid is side bar </h4>
     </div>
   </div>
 </div>
 
+<?php
+  get_footer();
 
-<?php wp_footer()?>
-</body>
-</html>
+?>
