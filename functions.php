@@ -7,4 +7,8 @@ include_once('Inc/enqueue.php');
 include_once('Inc/theme_functions.php');
 //  --------------------- manue raegister--------------
 include_once('Inc/menu_register.php');
-// register_nav_menu('primary_manue', __('Main Manu', 'torikultheme'));
+// --------------------- sidebar widgets register ------------
+include_once('Inc/wp_widgets.php');
+
+
+

@@ -12,6 +12,16 @@ body {
 }
 
 /* --------------- heder ------- */
+#hder_section {
+	box-shadow: 0 4px 2px -2px #ddd;
+	padding: 0 5%;
+	position: sticky;
+	top: 0;
+	background: #fff;
+}
+#hder_section .col-3 .logo{
+    width: 206px;
+}
 .manubar ul {
     display: flex;
     flex-wrap: wrap;
@@ -93,11 +103,87 @@ body {
     justify-content: center;
 }
 
+/* ------------------- blog info -section ----------- */
 
+#blogpost .col-md-9 .blog_info .title {
+	margin-bottom: 30px;
+	padding: 30px 20px;
+	box-shadow: 0px 0px 3px #ddd;
+}
+/* ------------------- sidbar ------------------- */
+.sibdebar li {
+	list-style: none;
+	margin-top: 13px;
+}
+.sibdebar .wp-block-heading {
+	font-size: 23px;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #000;
+    position: relative;
+}
+.sibdebar .wp-block-heading::before {
+    content: " ";
+    height: 100%;
+    width: 3px;
+    background: #00aeef;
+    left: -11px;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+.wp-block-search__inside-wrapper input[type="search"] {
+	height: 35px;
+	border: none;
+	box-shadow: 0 0 3px #bdc8ca inset;
+	border-radius: 5px;
+}
+ .wp-block-search__inside-wrapper button {
+    height: 35px;
+    background: #00aeef;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+.sibdebar #block-9 {
+    margin-top: 30px;
+}
+.sibdebar #block-10 ul li a {
+	color: #000;
+}
+.sibdebar #block-10 ul li a:hover {
+    color: #00aeef;
+}
 
 /* ------------------- footer-section ----------- */
+#footer-copyright {
+    background: gray;
+    padding: 30px;
+}
 #footer-copyright .footer-section {
     background: gray;
     padding: 10px 0;
     text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+
+#footer #block-16 {
+    margin-top: 30px;
+}
+#footer li {
+    list-style: none;
+}
+
+#footer .wp-block-image {
+    width: 205px;
+}
+#footer .wp-block-heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+#footer p {
+    font-size: 14px;
 }

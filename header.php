@@ -8,11 +8,13 @@
 </head>
 <body class="<?php body_class();?>">
     
-<div class="container <?= get_theme_mod('chang_positon');?>" id="hder_section">
+<div class="<?= get_theme_mod('chang_positon');?>" id="hder_section">
   <div class="row align-items-center">
     <div class="col-3">
     <!-- ---------- call kora hoyche dynamic logo control and register----------- -->
-      <img src="<?= get_theme_mod('loego_area');?>">
+     <div class="logo">
+     <a href="<?= home_url();?>"><img src="<?= get_theme_mod('loego_area');?>"></a>
+     </div>
     </div>
     <div class="col-9">
       <div class="manubar">
